@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %} Lista de departamentos {% endblock %}
+
+{% block content %}
+<h2> Listado de empresas </h2>
+    <ul>
+     {% for empresa in variable %}
+        <li>
+            <a href="{% url 'empresas_por_nombre' empresa.id %}">{{ empresa.nombre }}</a>
+        </li>
+    {% endfor %}
+    </ul>
+{% endblock %}
+
