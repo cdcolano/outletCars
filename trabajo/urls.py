@@ -1,6 +1,5 @@
 from django.urls import path
 
-from proyectos.mysite.myapp.models import Trabajador
 
 from . import views
 
