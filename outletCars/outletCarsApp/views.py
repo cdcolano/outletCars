@@ -3,7 +3,7 @@ from django.shortcuts import render, get_list_or_404, get_object_or_404
 from django.http import HttpResponse
 from django.views.generic.detail import DetailView
 from django.views.generic.list import ListView
-from .models import Coche, Marca, Categoría, Categoria_Coche
+from .models import Coche, Marca, Categoría
 
 def index(request):
     return HttpResponse("Hello, world!")
