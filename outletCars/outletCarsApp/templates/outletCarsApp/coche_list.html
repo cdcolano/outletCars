@@ -3,8 +3,8 @@
     <ul>
         {% for coche in coches_list %}
         <li>
-            <a href="{% url ‘detalle’ coche.matricula%}">{{ coche.matricula}}</a>
-            <p>{{ coche.nombre }}</p>
+            <a href="{% url ‘detalle_coche’ coche.matricula%}">{{ coche.matricula}}</a>
+            <p>{{ coche.modelo  }}</p>
             <p>{{ coche.km}}</p>
             <p>{{ coche.precio }}</p>
           </li>

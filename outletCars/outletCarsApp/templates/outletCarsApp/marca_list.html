@@ -1,0 +1,12 @@
+<body>
+    {% block content %}
+    <ul>
+        {% for marca in marcas_list %}
+        <li>
+            <a href="{% url ‘detalle_marca’ marca.id %}"> {{ marca.nombre}}</a>
+            <p>{{ marca.nombre }}</p>
+          </li>
+        {% endfor %}
+      </ul>
+    {% endblock %}
+</body>

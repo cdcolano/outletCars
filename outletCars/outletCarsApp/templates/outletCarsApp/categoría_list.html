@@ -1,0 +1,11 @@
+<body>
+    {% block content %}
+    <ul>
+        {% for categoria in categorias_list %}
+        <li>
+            <p>{{ categoria.nombre }}</p>
+          </li>
+        {% endfor %}
+      </ul>
+      {% endblock %}
+</body>

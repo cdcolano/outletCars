@@ -13,9 +13,11 @@ def index(request):
 #Lista de coches de una marca
 class ListaMarcasListView(ListView):
     model=Marca 
+    context_object_name='marcas_list'
    
 class MarcaDetailView(DetailView):
     model=Marca
+    template_name='marca_detail.html'
      #marca.coche_set.all
 
 class vistaInicialListView(ListView):
@@ -26,7 +28,6 @@ class vistaInicialListView(ListView):
 class CocheListView(ListView):
     model=Coche
     queryset= Coche.objects.order_by('precio')
-    template='coche_list.html'
     context_object_name='coches_list'
 
 class CocheDetailView(DetailView):
@@ -35,6 +36,7 @@ class CocheDetailView(DetailView):
 
 class CategoriaListView(ListView):
     model=Categoría
+    context_object_name='categorias_list'
      #for coche in categoria.coche_set.all()
 
 class CategoríaDetailView(DetailView):
