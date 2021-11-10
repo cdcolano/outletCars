@@ -70,16 +70,7 @@
         <p>This template has been tested in the following browsers:</p>
 
         <!--Lista con las diferentes ofertas de los coches-->
-        <ul>
-          {% for coche in coches_list %}
-          <li>
-              <a href="{% url ‘detalle’ coche.matricula%}">{{ coche.matricula}}</a>
-              <p>{{ coche.nombre }}</p>
-              <p>{{ coche.km}}</p>
-              <p>{{ coche.precio }}</p>
-            </li>
-          {% endfor %}
-        </ul>
+      
         <!--Fin lista con las diferentes ofertas-->
       </div>
     </div>

@@ -1,0 +1,12 @@
+<body>
+    <ul>
+        {% for coche in coches_list %}
+        <li>
+            <a href="{% url ‘detalle’ coche.matricula%}">{{ coche.matricula}}</a>
+            <p>{{ coche.nombre }}</p>
+            <p>{{ coche.km}}</p>
+            <p>{{ coche.precio }}</p>
+          </li>
+        {% endfor %}
+      </ul>
+</body>
