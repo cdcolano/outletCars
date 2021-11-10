@@ -26,6 +26,7 @@ class vistaInicialListView(ListView):
 class CocheListView(ListView):
     model=Coche
     queryset= Coche.objects.order_by('precio')
+    template='coche_list.html'
     context_object_name='coches_list'
 
 class CocheDetailView(DetailView):

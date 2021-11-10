@@ -1,4 +1,5 @@
 <body>
+    {% block content %}
     <ul>
         {% for coche in coches_list %}
         <li>
@@ -9,4 +10,5 @@
           </li>
         {% endfor %}
       </ul>
+      {% endblock %}
 </body>
