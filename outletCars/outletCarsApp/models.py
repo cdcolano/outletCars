@@ -11,11 +11,16 @@ class Marca(models.Model):
     nombre = models.CharField(max_length=50)
     pais= models.CharField(max_length=50)
 
+    def __str__(self) -> str:
+        return self.nombre
 
 
 class Categoría(models.Model):
     # Campo para la relación
     nombre = models.CharField(max_length=50)
+
+    def __str__(self) -> str:
+        return self.nombre
 
 
 class Coche(models.Model):
@@ -27,3 +32,6 @@ class Coche(models.Model):
     marca=models.ForeignKey(Marca, on_delete=models.CASCADE)
     combustible= models.CharField(max_length=50)
     categoría=models.ManyToManyField(Categoría)
+
+    def __str__(self) -> str:
+        return self.matricula
