@@ -1,14 +1,14 @@
 <body>
-    {% block content %}
-    <ul>
-        {% for coche in coches_list %}
-        <li>
-            <a href="{% url ‘detalle_coche’ coche.matricula%}">{{ coche.matricula}}</a>
-            <p>{{ coche.modelo  }}</p>
-            <p>{{ coche.km}}</p>
-            <p>{{ coche.precio }}</p>
-          </li>
-        {% endfor %}
-      </ul>
+  {% block content %}
+    {% for coche in coches_list %}
+      <li>
+        <a href="{% url 'detalle_coche' coche.matricula%}">{{ coche.matricula}}</a>
+        <p>{{ coche.modelo  }}</p>
+        <p>{{ coche.km}}</p>
+        <p>{{ coche.precio }}</p>
+      </li>
+      {% endfor %}
+        {% empty %}
+          <li>No hay categorias</li>
       {% endblock %}
 </body>

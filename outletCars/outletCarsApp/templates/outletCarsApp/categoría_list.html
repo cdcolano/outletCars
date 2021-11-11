@@ -1,11 +1,11 @@
 <body>
     {% block content %}
-    <ul>
         {% for categoria in categorias_list %}
         <li>
-            <p>{{ categoria.nombre }}</p>
-          </li>
+            <a href="{% url 'detalle_categoria' categoria.id%}">{{ categoria.nombre}}</a>
+        </li>
         {% endfor %}
-      </ul>
+        {% empty %}
+           <li>No hay categorias</li>
       {% endblock %}
 </body>
