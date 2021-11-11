@@ -4,8 +4,9 @@
         <li>
             <a href="{% url 'detalle_categoria' categoria.id%}">{{ categoria.nombre}}</a>
         </li>
-        {% endfor %}
         {% empty %}
-           <li>No hay categorias</li>
-      {% endblock %}
+          <li>No hay categorias</li>
+        {% endfor %}
+       
+    {% endblock %}
 </body>

@@ -6,6 +6,8 @@
             <a href="{% url 'detalle_marca' marca.id %}"> {{ marca.nombre}}</a>
             <p>{{ marca.nombre }}</p>
           </li>
+          {% empty %}
+          <li>No hay marcas</li>
         {% endfor %}
     </ul>
     {% endblock %}
