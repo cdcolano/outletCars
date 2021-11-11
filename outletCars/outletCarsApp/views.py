@@ -34,6 +34,8 @@ class CocheListView(ListView):
 
 class CocheDetailView(DetailView):
     model=Coche
+    slug_url_kwarg = "matricula"
+    slug_field = "matricula"
     #for categoria in coche.categoria 
 
 class CategoriaListView(ListView):

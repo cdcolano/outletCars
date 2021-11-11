@@ -1,0 +1,15 @@
+<body>
+    {% block content %}
+
+         <p>{{ coche.matricula }}</p>
+         <p>{{ coche.modelo }}</p>
+         <a href="{% url 'detalle_marca' coche.marca.id %}"> {{ coche.marca.nombre}}</a>
+         <p>{{ coche.km}}</p>
+         <p> {{ coche.combustible }}</p>
+        {% for cat in coche.categoria %}
+            <a href="{% url 'detalle_categoria' cat.id%}">{{ cat.nombre}}</a>
+            {% empty %}
+                <p>No hay cat</p>
+        {% endfor %}
+    {% endblock %}
+</body>
