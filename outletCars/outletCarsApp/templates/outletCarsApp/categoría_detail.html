@@ -1,0 +1,10 @@
+<body>
+    {% block content %}
+         <p>{{ categoria.nombre}}</p>
+        {% for coche in categoria.coche_set.all %}
+            <a href="{% url 'detalle_categoria' cat.id%}">{{ cat.nombre}}</a>
+            {% empty %}
+                <p>No hay coches</p>
+        {% endfor %}
+    {% endblock %}
+</body>

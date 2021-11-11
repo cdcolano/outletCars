@@ -8,6 +8,7 @@ from django.db.models.fields.related import ManyToManyField
 
 
 class Marca(models.Model):
+    id = models.BigAutoField(primary_key=True)
     nombre = models.CharField(max_length=50)
     pais= models.CharField(max_length=50)
 
@@ -17,6 +18,7 @@ class Marca(models.Model):
 
 class Categoría(models.Model):
     # Campo para la relación
+    id = models.BigAutoField(primary_key=True)
     nombre = models.CharField(max_length=50)
 
     def __str__(self) -> str:

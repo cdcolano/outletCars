@@ -17,9 +17,10 @@ class ListaMarcasListView(ListView):
    
 class MarcaDetailView(DetailView):
     model=Marca
-    slug_url_kwarg = "id"
-    slug_field = "id"
+    pk_url_kwarg = "id"
+    pk_field = "id"
     context_object_name='marca'
+    template_name='marca_detail.html'
      #marca.coche_set.all
 
 class vistaInicialListView(ListView):
@@ -45,3 +46,6 @@ class CategoriaListView(ListView):
 
 class CategoríaDetailView(DetailView):
     model=Categoría
+    slug_url_kwarg = "id"
+    slug_field = "id"
+    context_object_name='categoria'
