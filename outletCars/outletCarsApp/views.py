@@ -17,7 +17,9 @@ class ListaMarcasListView(ListView):
    
 class MarcaDetailView(DetailView):
     model=Marca
-    template_name='marca_detail.html'
+    slug_url_kwarg = "id"
+    slug_field = "id"
+    context_object_name='marca'
      #marca.coche_set.all
 
 class vistaInicialListView(ListView):

@@ -1,0 +1,13 @@
+<body>
+    {% block content %}
+
+         <p>{{ marca.nombre }}</p>
+         <p>{{ marca.pais }}</p>
+         {% for coche in marca.coche_set.all %}
+            <a href="{% url 'detalle_coche' coche.matricula%}">{{ coche.matricula}}</a>
+            {% empty %}
+            <p>No hay coches de esta marca</p>
+        {% endfor %}
+
+    {% endblock %}
+</body>
