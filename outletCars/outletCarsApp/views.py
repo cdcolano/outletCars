@@ -25,8 +25,14 @@ class MarcaDetailView(DetailView):
 
 class vistaInicialListView(ListView):
     model=Marca
-    #for coche in marca.Coche_set.all()
-        #te quedas solo con el primero
+    template_name='/outletCarsApp/vista_inicio.html'
+#    def get_context_data(self, **kwargs):
+    # Call the base implementation first to get a context
+#        context = super().get_context_data(**kwargs)
+        # Add in a QuerySet of all the books
+#        context['coche'] = Coche.objects.order_by('precio')[:1].get()
+#        return context
+    
 
 class CocheListView(ListView):
     model=Coche

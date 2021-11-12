@@ -1,0 +1,9 @@
+<body>
+    {% block content %}
+
+        <p>{{ marca.nombre }}</p>
+        <p>{{ marca.pais }}</p>
+        <a href="{% url 'detalle_coche' marca.coche_set.first.matricula%}">{{ coche.matricula}}</a>
+
+    {% endblock %}
+</body>

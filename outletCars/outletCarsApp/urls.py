@@ -4,7 +4,7 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('', views.index, name='index'),
+    path('',views.vistaInicialListView.as_view() , name='vista_inicial'),
     
 
     path('categorias',views.CategoriaListView.as_view(), name="categoria_list_view"),
