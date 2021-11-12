@@ -2,7 +2,7 @@
     {% block content %}
          <p>{{ categoria.nombre}}</p>
         {% for coche in categoria.coche_set.all %}
-            <a href="{% url 'detalle_categoria' cat.id%}">{{ cat.nombre}}</a>
+            <a href="{% url 'detalle_coche' coche.matricula%}">{{ coche.matricula}}</a>
             {% empty %}
                 <p>No hay coches</p>
         {% endfor %}
