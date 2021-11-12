@@ -19,15 +19,7 @@
             <h1>Outlet <a href="#"> Cars</a></h1>
           <!-- <div class="slogan">Cool slogan goes here!</div>-->
           </div>
-          <div id=" ">
-            <ul id="menu">
-              <!-- put class="current" in the li tag for the selected page - to highlight which page you're on -->
-              <li class="current"><a href="index.html">Ofertas</a></li>
-              <li><a href="examples.html">Marcas</a></li>
-              <li><a href="page.html">Categorias</a></li>
-            </ul>
-          </div>
-
+          {% block menu %}{% endblock %}
         </div>
         {% block content %}{% endblock %}
    </div>
