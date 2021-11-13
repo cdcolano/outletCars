@@ -13,14 +13,22 @@
   {% block content %}
 
     {% for coche in coches_list %}
+    <section id="site_content2">
       <li>
-        <a href="{% url 'detalle_coche' coche.matricula%}">{{ coche.matricula}}</a>
-        <p>{{ coche.modelo  }}</p>
-        <p>{{ coche.km}}</p>
-        <p>{{ coche.precio }}</p>
+        <div id = "Matricula">
+            <a href="{% url 'detalle_coche' coche.matricula%}">{{ coche.matricula}}</a>
+        </div>
+        <div>
+          <p>{{ coche.modelo  }}</p>
+          <p>{{ coche.km}} km</p>
+          <p>{{ coche.precio }} €</p>
+        </div>
       </li>
       {% empty %}
           <li>No hay categorias</li>
       {% endfor %}
-        
+
+    </section>
+  
+              
   {% endblock %}

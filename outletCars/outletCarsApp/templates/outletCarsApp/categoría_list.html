@@ -11,13 +11,15 @@
     </div> 
 {%endblock%}
 {% block content %}
-    <ul>
-        {% for categoria in categorias_list %}
-        <li>
-            <a class="lista" href="{% url 'detalle_categoria' categoria.id%}">{{ categoria.nombre}}</a>
-        </li>
-        {% empty %}
-            <li>No hay categorias</li>
-        {% endfor %}
-    </ul>  
+    <section id="site_content2">
+        <ul>
+            {% for categoria in categorias_list %}
+            <li>
+                <a class="lista" href="{% url 'detalle_categoria' categoria.id%}">{{ categoria.nombre}}</a>
+            </li>
+            {% empty %}
+                <li>No hay categorias</li>
+            {% endfor %}
+        </ul>  
+    </section>
 {% endblock %}

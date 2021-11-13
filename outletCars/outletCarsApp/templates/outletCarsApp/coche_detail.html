@@ -1,6 +1,18 @@
-<body>
-    {% block content %}
+{% extends "base.html" %}
+{% block menu %}
+    <div id=" ">
+        <ul id="menu">
+        <!-- put class="current" in the li tag for the selected page - to highlight which page you're on -->
+        <li> <a href="{% url 'coche_list_view' %}">Inicio</a></li>
+        <li class="current"><a href="{% url 'coche_list_view' %}">Ofertas</a></li>
+        <li ><a href="{%url 'marca_list_view' %}">Marcas</a></li>
+        <li><a href="{%url 'categoria_list_view' %}">Categorias</a></li>
+        </ul>
+    </div> 
+{%endblock%}
 
+    {% block content %}
+    <section class="DetailsSection">
          <p>{{ coche.matricula }}</p>
          <p>{{ coche.modelo }}</p>
          <a href="{% url 'detalle_marca' coche.marca.id %}"> {{ coche.marca.nombre}}</a>
@@ -11,5 +23,6 @@
             {% empty %}
                 <p>No hay cat</p>
         {% endfor %}
+    </section>
     {% endblock %}
-</body>
+
