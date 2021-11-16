@@ -22,7 +22,12 @@ class Categoría(models.Model):
     def __str__(self) -> str:
         return self.nombre
 
-
+class Motor(models.Model):
+    nombre = models.CharField(max_length=50)
+    combustible = models.CharField(max_length=50)
+    
+    def __str__(self) -> str:
+        return self.nombre
 class Coche(models.Model):
     modelo = models.CharField(max_length=50)
     matricula = models.CharField(max_length=9, primary_key=True)
@@ -30,8 +35,13 @@ class Coche(models.Model):
     cv=models.IntegerField()
     km=models.BigIntegerField()
     marca=models.ForeignKey(Marca, on_delete=models.CASCADE)
-    combustible= models.CharField(max_length=50)
+    motor= models.ForeignKey(Motor, on_delete=models.CASCADE)
     categoría=models.ManyToManyField(Categoría)
 
     def __str__(self) -> str:
         return self.matricula
+    class Meta:
+        ordering=['precio']
+
+
+

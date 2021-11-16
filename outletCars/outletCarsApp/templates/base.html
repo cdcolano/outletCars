@@ -1,22 +1,21 @@
-
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<meta charset="UTF-8">  
 <title>Outlet Cars</title>
-<meta name="description" content="website description" />
-<meta name="keywords" content="website keywords, website keywords" />
-<meta http-equiv="content-type" content="text/html; charset=windows-1252" />
-<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine&amp;v1" />
-<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz" />
-<link rel="stylesheet" href="{% static '/style/style.css' %}">
+<meta name="description" content="website description"/>
+<meta name="keywords" content="website keywords, website keywords"/>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine&amp;v1"/>
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz"/>
+<link rel="stylesheet" href="{% static '/style/style.css' %}"/>
 </head>
-
   <body>
     <div id="main">
         <div id="header">
           <div id="logo">
-            <h1>Outlet <a href="#"> Cars</a></h1>
+            <h1>Outlet <a href="{% url 'vista_inicial' %}"> Cars</a></h1>
           <!-- <div class="slogan">Cool slogan goes here!</div>-->
           </div>
           {% block menu %}{% endblock %}

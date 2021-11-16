@@ -1,9 +1,9 @@
 {% extends "base.html" %}
 {% block menu %}
-  <div id=" ">
+  <div>
     <ul id="menu">
       <!-- put class="current" in the li tag for the selected page - to highlight which page you're on -->
-      <li> <a href="{% url 'coche_list_view' %}">Inicio</a></li>
+      <li> <a href="{% url 'vista_inicial' %}">Inicio</a></li>
       <li class="current"><a href="{% url 'coche_list_view' %}">Ofertas</a></li>
       <li><a href="{%url 'marca_list_view' %}">Marcas</a></li>
       <li><a href="{%url 'categoria_list_view' %}">Categorias</a></li>
@@ -12,15 +12,26 @@
   {%endblock%}
   {% block content %}
 
-    {% for coche in coches_list %}
-      <li>
-        <a href="{% url 'detalle_coche' coche.matricula%}">{{ coche.matricula}}</a>
-        <p>{{ coche.modelo  }}</p>
-        <p>{{ coche.km}}</p>
-        <p>{{ coche.precio }}</p>
-      </li>
-      {% empty %}
-          <li>No hay categorias</li>
-      {% endfor %}
-        
+   
+    <section id="site_content2">
+      <ul>
+        {% for coche in coches_list %}
+        <li>
+          <div class = "Matricula">
+              <a href="{% url 'detalle_coche' coche.matricula%}">{{ coche.matricula}}</a>
+          </div>
+          <div>
+            <p>{{ coche.modelo  }}</p>
+            <p>{{ coche.km}} km</p>
+            <p>{{ coche.precio }} €</p>
+          </div>
+        </li>
+        {% empty %}
+            <li>No hay categorias</li>
+        {% endfor %}
+      </ul>
+
+    </section>
+  
+              
   {% endblock %}
