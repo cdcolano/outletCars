@@ -34,6 +34,7 @@ class vistaInicialListView(ListView):
 #        context['coche'] = Coche.objects.order_by('precio')[:1].get()
 #        return context
 
+
     
 
 class CocheListView(ListView):
@@ -45,6 +46,14 @@ class CocheDetailView(DetailView):
     model=Coche
     slug_url_kwarg = "matricula"
     slug_field = "matricula"
+    #for categoria in coche.categoria 
+
+
+class AjaxView(DetailView):
+    model=Coche
+  #  slug_url_kwarg = "matricula"
+  #  slug_field = "matricula"
+    template_name='outletCarsApp/ajax.html'
     #for categoria in coche.categoria 
 
 class CategoriaListView(ListView):

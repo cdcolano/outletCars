@@ -37,7 +37,7 @@ class Coche(models.Model):
     marca=models.ForeignKey(Marca, on_delete=models.CASCADE)
     motor= models.ForeignKey(Motor, on_delete=models.CASCADE)
     categoría=models.ManyToManyField(Categoría)
-
+    imagen= models.ImageField(upload_to='static/img/')
     def __str__(self) -> str:
         return self.matricula
     class Meta:

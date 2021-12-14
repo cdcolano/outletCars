@@ -13,8 +13,9 @@ urlpatterns = [
     path('coches/<str:matricula>',views.CocheDetailView.as_view(), name="detalle_coche"),
     path('marcas',views.ListaMarcasListView.as_view(), name="marca_list_view"),
     path('marcas/<int:pk>', views.MarcaDetailView.as_view(), name= "detalle_marca"),
-    path('motores/<int:pk>', views.MotorDetailView.as_view(), name="detalle_motor")
+    path('motores/<int:pk>', views.MotorDetailView.as_view(), name="detalle_motor"),
 
+    path('cochesAjax/<pk>',views.AjaxView.as_view(), name="ajax")
 
 
 ]
