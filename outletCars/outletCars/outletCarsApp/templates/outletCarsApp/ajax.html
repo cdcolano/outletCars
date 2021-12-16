@@ -1,0 +1,14 @@
+{% load static %}
+<head>
+    <link rel="stylesheet" href="{% static '/style/ajax.css' %}">
+</head>
+
+{% if coche %}
+    {% if coche.imagen %}
+        <img alt="{{ coche.imagen.name }}" class="post-avatar" src="{{coche.imagen.url}}" />
+    {% else %}
+        <p class="coche-meta">/static/img/{coche.imagen.name}"</p>
+    {% endif %}
+{% else %}
+    <p class="coche-meta">No existe este post.</p>
+{% endif %}

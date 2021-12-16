@@ -3,13 +3,12 @@ $(document).ready(function() {
 
     
     $(document).ready(function(){
-      $(".info-coche").slideUp(500);
+      $(".info-coche").hide();
     })
 
     
 
     $(".mostrarmenos").click(function(){
-      
       $(".info-coche").slideUp(500)
     });
     $(".mostrarmas").click(function(){
